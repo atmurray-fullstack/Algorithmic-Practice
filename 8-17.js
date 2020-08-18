@@ -325,27 +325,58 @@
 // tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 100 dollars
 // tickets([25, 25, 50, 50, 100]) // => NO. Vasya will not have the right bills to give 75 dollars of change (you can't make two bills of 25 from one of 50)
 
-function tickets(line) {
-    let billCount = [0, 0, 0];
+// function tickets(line) {
+//     let billCount = [0, 0, 0];
 
-    for (let i = 0; i < line.length; i++) {
-        if (line[i] === 25) {
-            billCount[0] += 1;
-        } else if (line[i] === 50) {
-            billCount[1] += 1;
-            billCount[0] -= 1;
-        } else if (line[i] === 100) {
-            if (billCount[1] === 0) {
-                billCount[0] -= 3
-            } else {
-                billCount[1] -= 1
-                billCount[0] -= 1
-            }
-        }
-        if (billCount[0] < 0) {
-            return 'NO'
-        }
+//     for (let i = 0; i < line.length; i++) {
+//         if (line[i] === 25) {
+//             billCount[0] += 1;
+//         } else if (line[i] === 50) {
+//             billCount[1] += 1;
+//             billCount[0] -= 1;
+//         } else if (line[i] === 100) {
+//             if (billCount[1] === 0) {
+//                 billCount[0] -= 3
+//             } else {
+//                 billCount[1] -= 1
+//                 billCount[0] -= 1
+//             }
+//         }
+//         if (billCount[0] < 0) {
+//             return 'NO'
+//         }
 
-    }
-    return 'YES'
+//     }
+//     return 'YES'
+// }
+
+
+////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
+// Given a string of words, you need to find the highest scoring word.
+
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+
+// You need to return the highest scoring word as a string.
+
+// If two words score the same, return the word that appears earliest in the original string.
+
+// All letters will be lowercase and all inputs will be valid.
+
+function high(x) {
+    let word = '';
+    let highScore = 0;
+    x.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ').split(' ').map(el => {
+        let score = 0;
+        for (let i = 0; i < el.length; i++) {
+            score += el.charCodeAt(i) - 96;
+        }
+        if (score > highScore) {
+            highScore = score;
+            word = el;
+        }
+    })
+    return word
+
 }
