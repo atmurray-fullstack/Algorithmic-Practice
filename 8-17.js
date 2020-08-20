@@ -364,19 +364,19 @@
 
 // All letters will be lowercase and all inputs will be valid.
 
-function high(x) {
-    let word = '';
-    let highScore = 0;
-    x.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ').split(' ').map(el => {
-        let score = 0;
-        for (let i = 0; i < el.length; i++) {
-            score += el.charCodeAt(i) - 96;
-        }
-        if (score > highScore) {
-            highScore = score;
-            word = el;
-        }
-    })
-    return word
+// function high(x) {
+//     let word = '';
+//     let highScore = 0;
+//     x.toLowerCase().replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ').split(' ').map(el => {
+//         let score = 0;
+//         for (let i = 0; i < el.length; i++) {
+//             score += el.charCodeAt(i) - 96;
+//         }
+//         if (score > highScore) {
+//             highScore = score;
+//             word = el;
+//         }
+//     })
+//     return word
 
-}
+// }
