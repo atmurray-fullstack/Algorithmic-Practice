@@ -22,3 +22,5 @@ function domainName(url) {
     console.log(string)
 }
 domainName('http://www.banana.com')
+
+///////regex key to solution
