@@ -6,10 +6,13 @@
 
 function domainName(url) {
     //your code here
+
+    let firstReg = /https*/
+
     let patt1 = new RegExp('http');
     let patt2 = new RegExp('https');
     let patt3 = new RegExp('www.');
-    let patt4
+
 
 
 
