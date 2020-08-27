@@ -80,6 +80,7 @@ function josephusSurvivor(n, k) {
     //your code here
 
     for (let i = 0; i < n.length; i + k) {
+        let arr = n;
         if (i + k > n.length) {
             i =
         }
