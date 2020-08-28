@@ -77,12 +77,27 @@
 // [4] => 1 counted out, 4 is the last element - the survivor!
 
 function josephusSurvivor(n, k) {
-    //your code here
+    let count = [];
+    let index
 
-    for (let i = 0; i < n.length; i + k) {
-        let arr = n;
-        if (i + k > n.length) {
-            i =
-        }
+    for (i = 1; i <= n; i++) {
+        count.push(i);
     }
+    index = k % n === 0 ?
+        index = n - 1
+        : index = (k % n) - 1
+    console.log(index)
+    while (count.length > 1) {
+
+        index = index > count.length - 1 ? (k % count.length) - 1 : index
+        count.splice(index, 1);
+        index += k - 1
+
+
+
+    }
+    // console.log(count)
+    return count[0]
 }
+
+josephusSurvivor(11, 19)
