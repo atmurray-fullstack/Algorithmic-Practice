@@ -76,28 +76,32 @@
 // [1,4] => 5 is counted out
 // [4] => 1 counted out, 4 is the last element - the survivor!
 
-function josephusSurvivor(n, k) {
-    let count = [];
-    let index
+// function josephusSurvivor(n, k) {
+//     let count = [];
+//     let index
+//     console.log(n + ':' + k)
+//     for (i = 1; i <= n; i++) {
+//         count.push(i);
+//     }
 
-    for (i = 1; i <= n; i++) {
-        count.push(i);
-    }
-    index = k % n === 0 ?
-        index = n - 1
-        : index = (k % n) - 1
-    console.log(index)
-    while (count.length > 1) {
+//     index = k % n === 0 ?
+//         index = n - 1
+//         : index = (k % n) - 1
+//     while (count.length > 1) {
+//         if (index > count.length - 1) {
+//             index = index - count.length
+//         }
+//         count.splice(index, 1);
+//         if (count.length === 1) {
+//             break
+//         }
+//         index += (k % count.length) - 1
+//     }
+//     console.log(count)
+//     return count[0]
+// }
 
-        index = index > count.length - 1 ? (k % count.length) - 1 : index
-        count.splice(index, 1);
-        index += k - 1
-
-
-
-    }
-    // console.log(count)
-    return count[0]
-}
-
-josephusSurvivor(11, 19)
+// josephusSurvivor(7, 3)
+/*POSTED ISSUE WITH KATA ON CODEWARS BOARD TEST CASES HAVE
+SOLUTIONS WITH VALUES OUTSIDE OF INPUT VALUES
+*/
