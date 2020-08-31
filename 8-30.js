@@ -33,3 +33,45 @@
 //     return matchArr
 // }
 // anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']);
+
+
+////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+// We need to sum big numbers and we require your help.
+
+// Write a function that returns the sum of two numbers. 
+// The input numbers are strings and the function must return a string.
+
+// Example
+// add("123", "321"); -> "444"
+// add("11", "99");   -> "110"
+
+// function add(a, b) {
+//     let num1 = a.split('');
+//     let num2 = b.split('')
+//     let carry = 0, addNum, result = []
+
+//     while (num2.length < num1.length) {
+//         num2.unshift('0')
+//     }
+//     while (num1.length < num2.length) {
+//         num1.unshift('0')
+//     }
+//     for (let i = num1.length - 1; i >= 0; i--) {
+//         // console.log(i)
+//         addNum = parseInt(num1[i]) + parseInt(num2[i]) + parseInt(carry)
+//         addNum = addNum.toString()
+//         if (addNum.length === 2) {
+//             result.unshift(addNum[1])
+//         } else if (addNum.length === 1) {
+//             result.unshift(addNum)
+//         }
+//         carry = addNum.length > 1 ? 1 : 0
+//     }
+//     carry === 1 ? result.unshift('1') : null
+//     result = result.join('')
+//     return result
+// }
+// add('1', '1')
